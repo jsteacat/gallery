@@ -104,4 +104,22 @@ ul {
   font-family: airstream;
   font-size: 40px;
 }
+
+.hidden-detail .thumbnail__list {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.hidden-detail .thumbnail__item {
+  max-width: 80%;
+}
+
+.hidden-detail .thumbnail__item + li {
+  margin-top: 20px;
+}
+
+.hidden-detail .detail__container {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */

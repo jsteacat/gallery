@@ -33,7 +33,6 @@ const addThumbClickHandler = (thumb) => {
   thumb.addEventListener('click', event => {
     event.preventDefault();
     setDetailsFromThumb(thumb);
-    showDetails();
   });
 }
 
@@ -44,23 +43,16 @@ const getThumbnailsArray = () => {
   return thumbnailArray;
 }
 
-const hideDetails = () => {
+const hideDetail = () => {
   'use strict';
   document.body.classList.add(HIDDEN_DETAIL_CLASS);
-}
-
-const showDetails = () => {
-  'use strict';
-  document.body.classList.remove(HIDDEN_DETAIL_CLASS);
 }
 
 const addKeyPressHandler = () => {
   'use strict';
   document.body.addEventListener('keyup', event => {
     event.preventDefault();
-    if (event.keyCode === ESC_KEY) {
-      hideDetails();
-    }
+    console.log(event.keyCode);
   });
 }
 

@@ -33,7 +33,6 @@ const addThumbClickHandler = (thumb) => {
   thumb.addEventListener('click', event => {
     event.preventDefault();
     setDetailsFromThumb(thumb);
-    showDetails();
   });
 }
 
@@ -58,6 +57,7 @@ const addKeyPressHandler = () => {
   'use strict';
   document.body.addEventListener('keyup', event => {
     event.preventDefault();
+    console.log(event.keyCode);
     if (event.keyCode === ESC_KEY) {
       hideDetails();
     }

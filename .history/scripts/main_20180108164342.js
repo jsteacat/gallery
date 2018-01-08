@@ -11,6 +11,8 @@ const setDetails = (imageUrl, titleText) => {
 
   const detailTitle = document.querySelector(DETAIL_TITLE_SELECTOR);
   detailTitle.textContent = titleText;
+
+  showDetails();
 }
 
 const imageFromThumb = (thumbnail) => {
@@ -33,7 +35,6 @@ const addThumbClickHandler = (thumb) => {
   thumb.addEventListener('click', event => {
     event.preventDefault();
     setDetailsFromThumb(thumb);
-    showDetails();
   });
 }
 
@@ -58,6 +59,7 @@ const addKeyPressHandler = () => {
   'use strict';
   document.body.addEventListener('keyup', event => {
     event.preventDefault();
+    console.log(event.keyCode);
     if (event.keyCode === ESC_KEY) {
       hideDetails();
     }
