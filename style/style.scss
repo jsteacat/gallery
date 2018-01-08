@@ -48,6 +48,7 @@ ul {
     justify-content: space-between;
     white-space: nowrap;
     overflow-x: auto;
+    padding: 20px 0;
   }
 
   &__item {
@@ -55,6 +56,11 @@ ul {
     max-width: 120px;
     border: 1px solid rgb(100%, 100%, 100%);
     border: 1px solid rgba(100%, 100%, 100%, .8);
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
   
   &__title {
@@ -85,6 +91,7 @@ ul {
   &__wrapper {
     text-align: center;
     position: relative;
+    transition: transform .3s;
   }
 
   &__image {
@@ -131,4 +138,9 @@ ul {
 
   }
 
+}
+
+.is-tiny {
+  transform: scale(0.001);
+  transition: transform 0s;
 }

@@ -56,6 +56,7 @@ ul {
   justify-content: space-between;
   white-space: nowrap;
   overflow-x: auto;
+  padding: 20px 0;
 }
 
 .thumbnail__item {
@@ -63,6 +64,11 @@ ul {
   max-width: 120px;
   border: 1px solid white;
   border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: transform .3s ease-in-out;
+}
+
+.thumbnail__item:hover {
+  transform: scale(1.2);
 }
 
 .thumbnail__title {
@@ -89,6 +95,7 @@ ul {
 .detail__wrapper {
   text-align: center;
   position: relative;
+  transition: transform .3s;
 }
 
 .detail__image {
@@ -121,5 +128,10 @@ ul {
 
 .hidden-detail .detail__container {
   display: none;
+}
+
+.is-tiny {
+  transform: scale(0.001);
+  transition: transform 0s;
 }
 /*# sourceMappingURL=style.css.map */
