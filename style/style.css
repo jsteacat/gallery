@@ -95,7 +95,7 @@ ul {
 .detail__wrapper {
   text-align: center;
   position: relative;
-  transition: transform .3s;
+  transition: transform 0.3s cubic-bezier(1, 0.06, 0.28, 1);
 }
 
 .detail__image {
